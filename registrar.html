@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Leonardo Ribeiro Andrade">
+    <meta name="description" content="Doe ou adote animais de estimação no Brasil">
+    <meta name="keywords" content="Adoção, Doação, Cachorro, Cão, Gato, Pet">
+    
+    <title>Encaramelados_Registrar</title>    
+
+    <link rel="stylesheet" href="./css/w3.css">
+    <link rel="stylesheet" href="./css/LrStyles.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/registrar.css">  
+</head>
+<body>
+    <section class="flexCenter">
+        <a id="returnButton" href="./index.html">Retornar</a>
+        <img id="heroImage1" src="./images/cat-g47742c9bf_1280.jpg" alt="Gato esticando">
+        <!--Imagem de <a href="https://pixabay.com/pt/users/jaclou-dl-5602247/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5098930">JackieLou DL</a> por <a href="https://pixabay.com/pt/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5098930">Pixabay</a>-->
+        <img id="heroImage2" src="./images/puppy-g42d73218a_1280.jpg" alt="Cachorro em caixa">
+        <!--Imagem de <a href="https://pixabay.com/pt/users/vlaaitje-1637107/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1047521">Ilona Krijgsman</a> por <a href="https://pixabay.com/pt/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1047521">Pixabay</a>-->        
+        <form id="signUpForm" class="flexColumnCenter" action="">
+            <label for="nameInput">Nome Da ONG</label>
+            <input type="text" name="nameInput" id="nameInput">
+
+            <label for="emailInput">E-Mail</label>
+            <input type="text" name="emailInput" id="emailInput">
+
+            <label for="passwordInput">Senha (min 8 caracteres)</label>        
+            <input type="text" name="passwordInput" id="passwordInput" minlength="8">
+
+            <label for="addressInput">Endereço</label>
+            <select id="addressInput">
+                <option value="">Cidade</option>
+                <optgroup label="Minas Gerais">                
+                    <option value="Belo Horizonte">Belo Horizonte</option>
+                    <option value="Betim">Betim</option>
+                    <option value="Brumadinho">Brumadinho</option>
+                    <option value="NovaLima">Nova Lima</option>
+                    <option value="RibeirãoDasNeves">Ribeirão Das Neves</option>
+                    <option value="SantaLuzia">Santa Luzia</option>
+                </optgroup>
+            </select>
+            <div class="flexcenter">
+                <button id="signUpButton" type="button">Registrar</button>
+                <button id="signInButton" type="button">Ja Estou Registrado</button>
+            </div>
+        </form>
+    </section>
+
+    <script src="./js/LrStyles.js"></script>
+</body>
+</html>

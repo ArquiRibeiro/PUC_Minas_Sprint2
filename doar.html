@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Leonardo Ribeiro Andrade">
+    <meta name="description" content="Doe ou adote animais de estimação no Brasil">
+    <meta name="keywords" content="Adoção, Doação, Cachorro, Cão, Gato, Pet">
+    
+    <title>Encaramelados_Doar</title>    
+
+    <link rel="stylesheet" href="./css/w3.css">
+    <link rel="stylesheet" href="./css/LrStyles.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/doar.css">    
+</head>
+<body>
+    <header id="header">
+        <section id="hero" class="flexCenter">
+            <img class="heroImage" src="./images/cat-g59eca2fd1_1280.jpg" alt="Gato sobre pedra">
+            <!--Imagem de <a href="https://pixabay.com/pt/users/berenikebonner-5369964/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2337250">Berenike Bonner</a> por <a href="https://pixabay.com/pt/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2337250">Pixabay</a>-->
+            <h1>Encontre uma ong pertinho<br>de você para doar o seu pet</h1>
+        </section>
+
+        <section id="navBar">
+            <div class="flexStart iconTitle">
+                <img class="logo" src="./images/icons/dog-solid.svg" alt="logo">
+                <h2>Encaramelados</h2>
+            </div>
+            <div class="flexRight buttons">
+                <a class="signUp neonHover" href="./registrar.html">Registrar ONG</a>
+                <a class="signIn neonHover" href="./entrar.html">Entrar</a>
+            </div>
+
+            <nav class="flexRight navLinks">
+                <button class="w3-button sidebarButton" onclick="w3_open()">&#9776;</button>            
+
+                <a class="flexColumnCenter navLink" href="./index.html">
+                    <img class="icon" src="./images/icons/paw-solid.svg" alt="icone">
+                    <span>Home</span>
+                </a>
+                <a class="flexColumnCenter navLink" href="#">
+                    <img class="icon" src="./images/icons/circle-info-solid.svg" alt="icone">
+                    <span>Sobre Nós</span>
+                </a>
+                <a class="flexColumnCenter navLink" href="./adotar.html">
+                    <img class="icon" src="./images/icons/house-solid.svg" alt="icone">
+                    <span>Quero Adotar</span>
+                </a>
+                <a class="flexColumnCenter navLink" href="./doar.html">
+                    <img class="icon" src="./images/icons/house-medical-solid.svg" alt="icone">
+                    <span>Quero Doar</span>
+                </a>
+                <a class="flexColumnCenter navLink" href="#">
+                    <img class="icon" src="./images/icons/newspaper-solid.svg" alt="icone">
+                    <span>Blog</span>
+                </a>
+            </nav>
+        </section>
+
+    <main id="main">
+
+        <section id="doar" class="flexSpaceEvenly">
+            <iframe id="LrGoogleMap1" class="LrGoogleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240097.4951007802!2d-44.10413853412264!3d-19.902338635123137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa690cacacf2c33%3A0x5b35795e3ad23997!2sBelo%20Horizonte%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1653248081753!5m2!1spt-BR!2sbr"
+            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="text">
+                <h2>Não os abandone. Deixe-os aos cuidados de uma ONG confiável</h2>
+                <p>Basta procurar no mapa ao lado por uma ONG próxima e contatálos sobre a situação</p>
+                <div id="LrList1" class="LrList flexColumnCenter">
+                    <input class="LrSearchInput" type="text" placeholder="Ex: Belo Horizonte" onkeyup="LrListSort('LrList1',event.key)">
+                    <ul class="LrListItems">
+                        <li class="LrListItem BELOHORIZONTE" onclick="LrGoogleMapGoTo('1', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240097.4951007802!2d-44.10413853412264!3d-19.902338635123137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa690cacacf2c33%3A0x5b35795e3ad23997!2sBelo%20Horizonte%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1653248081753!5m2!1spt-BR!2sbr')">ONG (em Belo Horizonte)</li>
+                        <li class="LrListItem BETIM" onclick="LrGoogleMapGoTo('1', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240037.67580596454!2d-44.33239168018213!3d-19.941730475169656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6c24a5fb01f9b%3A0xdae51d9facff118f!2sBetim%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1653258859011!5m2!1spt-BR!2sbr')">ONG (em Betim)</li>
+                        <li class="LrListItem BRUMADINHO" onclick="LrGoogleMapGoTo('1', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59930.20053278999!2d-44.28886505494616!3d-20.149164003800454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6cdbaf09cbc8d%3A0x1978fa76715f9eaf!2sBrumadinho%2C%20MG%2C%2035460-000!5e0!3m2!1spt-BR!2sbr!4v1653259346727!5m2!1spt-BR!2sbr')">ONG (em Brumadinho)</li>
+                        <li class="LrListItem NOVALIMA" onclick="LrGoogleMapGoTo('1', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d239896.09325946565!2d-44.046900470860294!3d-20.034668502702505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6a30042cd1f59%3A0xa317953d89263640!2sNova%20Lima%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1653259701510!5m2!1spt-BR!2sbr')">ONG (em Nova Lima)</li>
+                        <li class="LrListItem RIBEIRÃODASNEVES" onclick="LrGoogleMapGoTo('1', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120136.1150984521!2d-44.14158790806881!3d-19.786842279684848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa68d65ce6647bb%3A0xf6b57930a4c07785!2sRibeir%C3%A3o%20das%20Neves%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1653259668842!5m2!1spt-BR!2sbr')">ONG (em Ribeirão Das Neves)</li>
+                        <li class="LrListItem SANTALUZIA" onclick="LrGoogleMapGoTo('1', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240363.42875873225!2d-43.991073101655566!3d-19.726304132733016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa680bee4750f7f%3A0xe6c83b9292d7eea0!2sSanta%20Luzia%20-%20MG!5e0!3m2!1spt-BR!2sbr!4v1653259622856!5m2!1spt-BR!2sbr')">ONG (em Santa Luzia)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="FAQ" class="flexColumnCenter">
+            <h2>FAQ</h2>
+            <div id="LrAccordion1" class="LrAccordion">
+                <button class="LrAccordionButton" onclick="openAccordion(1)">Como doar um pet?</button>
+                <p class="LrAccordionItem">TESTE</p>
+            </div>
+            <div id="LrAccordion2" class="LrAccordion">
+                <button class="LrAccordionButton" onclick="openAccordion(2)">Para quem vai o meu pet?</button>
+                <p class="LrAccordionItem">TESTE</p>
+            </div>
+            <div id="LrAccordion3" class="LrAccordion">
+                <button class="LrAccordionButton" onclick="openAccordion(3)">Onde posso encontrar ONG's?</button>
+                <p class="LrAccordionItem">TESTE</p>
+            </div>
+            <div id="LrAccordion4" class="LrAccordion">
+                <button class="LrAccordionButton" onclick="openAccordion(4)">Preciso pagar algo?</button>
+                <p class="LrAccordionItem">TESTE</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="flexCenter">
+        <p>(WIP) Autor: Leonardo Ribeiro Andrade</p>
+    </footer>
+
+    <script src="./js/LrStyles.js"></script>
+</body>
+</html>
