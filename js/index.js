@@ -2,10 +2,10 @@ if(JSON.parse(sessionStorage.getItem('dbAnimal')) == null){
 
     sessionStorage.setItem('dbAnimal', JSON.stringify({animais: [
         { nome: "Belinha", tipo: "Cachorro", raca: "Poodle", idade: "8", tamanho: "médio", descricao: "Bagunceira", ongID: "1" },
-        { nome: "Nina", tipo: "Gato", raca: "Norueguês", idade: "3", tamanho: "pequeno", descricao: "MUITO Bagunceira", ongID: "1" },
-        { nome: "Marchal", tipo: "Gato", raca: "Siamês", idade: "3", tamanho: "pequeno", descricao: "Só aceita rações caras", ongID: "1" },
-        { nome: "lora", tipo: "Passaro", raca: "Tucano", idade: "1", tamanho: "pequeno", descricao: "Bastante peludinha", ongID: "1" }
-        { nome: "lora", tipo: "Passaro", raca: "Golden retriever", idade: "7", tamanho: "grande", descricao: "bastante animado e agitado. Adora bolinhas.", ongID: "1" }
+        { nome: "Nina", tipo: "Gato", raca: "Norueguês", idade: "3", tamanho: "pequeno", descricao: "MUITO Bagunceira. Destruidora de brinquedos!", ongID: "1" },
+        { nome: "Marchal", tipo: "Gato", raca: "Siamês", idade: "3", tamanho: "pequeno", descricao: "Só aceita rações caras.", ongID: "1" },
+        { nome: "lora", tipo: "Passaro", raca: "Tucano", idade: "1", tamanho: "pequeno", descricao: "Bastante peludinha.", ongID: "1" },
+        { nome: "lora", tipo: "Cachorro", raca: "Golden retriever", idade: "7", tamanho: "grande", descricao: "Bastante animado e agitado. Adora bolinhas de morder.", ongID: "1" }
     ]}))
 }
 
