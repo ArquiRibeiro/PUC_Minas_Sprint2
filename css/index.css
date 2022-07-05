@@ -1,14 +1,133 @@
 :root{
     --white:            whitesmoke;
     --black:            #252525;
-    --primary_color:    #da7a24;
-    --secondary_color:  #d1a650;
-    --tertiary_color:   #e2cc92;
+    --primary_color:    #eab563;
+    --secondary_color:  #e2cc92;
 }
 
+
+
 h1{
+    color: var(--black);
+}
+
+section{
+    padding: 32px;
+}
+
+button{
+    background-color: var(--white);
+    transition: 300ms;
+}
+
+button:hover{
+    background-color: lightblue;
+}
+
+button:disabled{
+    cursor: default;
+    background-color: gray;
+}
+
+.heroTitle{
     color: var(--white);
 }
+
+.modal{
+    display: none;
+    opacity: 0%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: 500ms;
+    z-index: 1000;
+}
+
+.modal .modalItem{    
+    background-color: var(--white);
+    padding: 8px;
+    z-index: 100;
+}
+
+.modal .modalItem img{
+    width: 300px;
+}
+
+.modal .modalItem div{
+    width: 100%;
+}
+
+.modal .modalItem form{
+    gap: 4px;
+}
+
+.modal .modalItem form input{
+    text-align: left;
+}
+
+#modalLogin .modalItem{
+    padding: 16px;
+    background-color: var(--secondary_color);
+    border-radius: 16px;    
+}
+
+#modalLogin .modalItem form input{
+    border: 0px;
+    border-radius: 1000px;
+}
+
+#modalLogin .modalItem form button{
+    margin-top: 8px;
+}
+
+#modalMobileSidebar nav{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height: 100%;
+    background-color: var(--white);
+    padding: 16px 0px;
+    overflow: auto;
+    z-index: 100;
+}
+
+#modalMobileSidebar .navLink{
+    width: 100%;
+    padding: 8px;
+    transition: var(--fast);
+}
+
+#modalMobileSidebar .navLink:hover{
+    background-color: var(--primary_color);
+}
+
+#modalMobileSidebar #signUpButton{
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+#modalMobileSidebar #signInButton{
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+#modalAnimalDetails .modalItem{
+    background-color: var(--secondary_color);
+    border-radius: 16px;
+    gap: 8px;
+    padding: 16px;
+}
+
+#modalAnimalDetails .modalItem img{
+    width: 200px;
+    margin: 0px auto;
+    border-radius: 16px;
+}
+
 
 #header #hero{
     position: relative;
@@ -16,16 +135,17 @@ h1{
     overflow: hidden;
 }
 
-#header #hero .heroImage{    
-    width: 100%;    
+#header #hero .heroImage{
+    min-width: 100%;
     position: absolute;
     z-index: -1;
     filter: blur(1px);
+    object-fit: cover;
 }
 
 #header #navBar{
     width: 100%;
-    background-color: var(--secondary_color);
+    background-color: var(--primary_color);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
@@ -68,11 +188,11 @@ h1{
 }
 
 #header #navBar .buttons .signUp{
-    background-color: var(--tertiary_color);
+    background-color: var(--secondary_color);
 }
 
 #header #navBar .buttons .signIn{
-    background-color: var(--tertiary_color);
+    background-color: var(--secondary_color);
 }
 
 #header #navBar .navLinks{
@@ -81,7 +201,7 @@ h1{
     grid-row: 1;
 }
 
-#header #navBar .navLinks .sidebarButton{
+#header #navBar .navLinks .mobileSidebarButton{
     display: block;
 }
 
@@ -119,9 +239,13 @@ h1{
 }
 
 #postedSlider, #adoptedSlider{
-    background-color: var(--tertiary_color);
+    background-color: var(--secondary_color);
     gap: 4px;
     padding: 16px 0px;
+}
+
+#postedSlider .LrSlider .sliderWindow .sliderItem{
+    cursor: pointer;
 }
 
 #FAQ{
@@ -130,7 +254,7 @@ h1{
 }
 
 #footer{
-    background-color: var(--secondary_color);
+    background-color: var(--primary_color);
     padding: 32px;
 }
 
@@ -153,7 +277,7 @@ h1{
         justify-content: space-between;
     }
 
-    #header #navBar .navLinks .sidebarButton{
+    #header #navBar .navLinks .mobileSidebarButton{
         display: none;
     }
 

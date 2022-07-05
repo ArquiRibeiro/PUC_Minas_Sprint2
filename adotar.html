@@ -7,15 +7,15 @@
     <meta name="author" content="Leonardo Ribeiro Andrade">
     <meta name="description" content="Doe ou adote animais de estimação no Brasil">
     <meta name="keywords" content="Adoção, Doação, Cachorro, Cão, Gato, Pet">
-    
-    <title>Encaramelados</title>    
+
+    <title>Encaramelados</title>
 
     <link rel="icon" href="./images/icons/dog-solid.ico">
-    
+
     <link rel="stylesheet" href="./css/w3.css">
     <link rel="stylesheet" href="./css/LrStyles.css">
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/doar.css">    
+	<link rel="stylesheet" href="./css/adotar.css">
 </head>
 <body>
     <div id="modalLogin" class="modal flexCenter" onclick="LrCloseModal('modalLogin')">
@@ -87,20 +87,20 @@
                 <a class="flexColumnCenter navLink" href="https://encarameladospuc.blogspot.com/" target="_blank" rel="noopener noreferrer">
                     <img class="icon" src="./images/icons/newspaper-solid.svg" alt="icon">
                     <span>Blog</span>
-                </a>                
+                </a>
             </nav>
         </section>
     </header>
 
     <main id="main">
 
-        <section id="doar" class="flexSpaceEvenly">
+        <section id="adotar" class="flexSpaceEvenly">
             <iframe id="LrGoogleMap1" class="LrGoogleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240097.4951007802!2d-44.10413853412264!3d-19.902338635123137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa690cacacf2c33%3A0x5b35795e3ad23997!2sBelo%20Horizonte%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1653248081753!5m2!1spt-BR!2sbr"
             width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
             <div class="text">
-                <h2>Não os abandone. Deixe-os aos cuidados de uma ONG confiável</h2>
-                <p>Basta procurar no mapa ao lado por uma ONG próxima e contatálos sobre a situação</p>
+                <h2>Vamos procurar uma insituição confiável</h2>
+                <p>Basta procurar no mapa ao lado por uma ONG próxima e informar seu interesse!</p>
                 <div id="LrList1" class="LrList flexColumnCenter">
                     <input class="LrSearchInput" type="text" placeholder="Ex: Belo Horizonte" onkeyup="LrListSort('LrList1',event.key)">
                     <ul class="LrListItems">
@@ -114,25 +114,67 @@
                 </div>
             </div>
         </section>
-        <section id="FAQ" class="flexColumnCenter">
-            <h2>FAQ</h2>
-            <div id="LrAccordion1" class="LrAccordion">
-                <button class="LrAccordionButton" onclick="openAccordion(1)">Como doar um pet?</button>
-                <p class="LrAccordionItem">TESTE</p>
+
+        <section id="postedSlider" class="flexColumnCenter">
+            <div class="flexCenter">
+                <h2 class="title">Disponiveis Para Adoção</h2>
             </div>
-            <div id="LrAccordion2" class="LrAccordion">
-                <button class="LrAccordionButton" onclick="openAccordion(2)">Para quem vai o meu pet?</button>
-                <p class="LrAccordionItem">TESTE</p>
+            <div id="filterBar" class="flexStart">
+                <div class="w3-dropdown-hover">
+                    <button class="w3-button">Filtrar</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-border">
+                        <div class="w3-bar-item">
+                            <input type="checkbox" id="cachorroInput" onchange="changeFilter(this.id.replace('Input', ''))">
+                            <label for="cachorroInput">Cachorro</label>                            
+                        </div>
+                        <div class="w3-bar-item">
+                            <input type="checkbox" id="gatoInput" onchange="changeFilter(this.id.replace('Input', ''))">
+                            <label for="gatoInput">Gato</label>                            
+                        </div>
+                        <div class="w3-bar-item">
+                            <input type="checkbox" id="passaroInput" onchange="changeFilter(this.id.replace('Input', ''))">
+                            <label for="passaroInput">Pássaro</label>                            
+                        </div>
+
+                        <div class="w3-bar-item">
+                            <input type="checkbox" id="peludInput" onchange="changeFilter(this.id.replace('Input', ''))">
+                            <label for="peludInput">Peludo</label>                            
+                        </div>
+                        <div class="w3-bar-item">
+                            <input type="checkbox" id="carecaInput" onchange="changeFilter(this.id.replace('Input', ''))">
+                            <label for="carecaInput">Sem-Pelo</label>
+                        </div>
+                        <div class="w3-bar-item">
+                            <input type="checkbox" id="animadInput" onchange="changeFilter(this.id.replace('Input', ''))">
+                            <label for="animadInput">Animado</label>
+                        </div>
+                        <div class="w3-bar-item">
+                            <input type="checkbox" id="calmInput" onchange="changeFilter(this.id.replace('Input', ''))">
+                            <label for="calmInput">Calmo</label>                            
+                        </div>
+                        <div class="w3-bar-item">
+                            <input type="checkbox" id="bagunceirInput" onchange="changeFilter(this.id.replace('Input', ''))">
+                            <label for="bagunceirInput">Bagunceiro</label>                            
+                        </div>
+                    </div>
+                  </div>
             </div>
-            <div id="LrAccordion3" class="LrAccordion">
-                <button class="LrAccordionButton" onclick="openAccordion(3)">Onde posso encontrar ONG's?</button>
-                <p class="LrAccordionItem">TESTE</p>
-            </div>
-            <div id="LrAccordion4" class="LrAccordion">
-                <button class="LrAccordionButton" onclick="openAccordion(4)">Preciso pagar algo?</button>
-                <p class="LrAccordionItem">TESTE</p>
-            </div>
+            <div class="flexCenter LrSlider">
+                <button type="button" class="arrowButton" onclick="moveSlider('#main #postedSlider .sliderWindow .sliderItemsContainer', 'left', 10)"><img class="arrowIcon" src="./images/icons/angle-left-solid.svg" alt="<"></button>
+                <div class="sliderWindow">
+                    <div class="flexStart sliderItemsContainer" style="left: 0px;">
+                        
+                    </div>
+                </div>
+                <button type="button" class="arrowButton" onclick="moveSlider('#main #postedSlider .sliderWindow .sliderItemsContainer', 'right', 10)"><img class="arrowIcon" src="./images/icons/angle-right-solid.svg" alt="<"></button>
+            </div>            
         </section>
+
+        <div id="modalAnimalDetails" class="modal flexCenter" onclick="LrCloseModal('modalAnimalDetails')">
+            <div class="modalItem flexColumnStartCenter" onclick="event.stopPropagation()">
+                
+            </div>
+        </div>
 
     </main>
 
@@ -142,5 +184,7 @@
 
     <script src="./js/LrStyles.js"></script>
     <script src="./js/Login.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/adotar.js"></script>
 </body>
 </html>

@@ -15,7 +15,11 @@ h1, h2, h3{
 }
 
 h1{
-    text-shadow: 2px 2px var(--black);
+    /*text-shadow: 2px 2px var(--black);*/
+}
+
+p{
+    text-align: justify;
 }
 
 a{
@@ -26,6 +30,10 @@ button{
     border: 0px;
     cursor: pointer;
     padding: 4px 8px;
+}
+
+textarea{
+    text-align: left;
 }
 
 
@@ -66,6 +74,47 @@ button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.flexColumnStart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.flexColumnStartStart{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.flexColumnStartCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flexColumnEnd{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.flexEnd{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+/*CLASSES*/
+.hide{
+    display: none;
 }
 
 
@@ -205,6 +254,7 @@ button{
     padding: 8px;
     box-shadow: 4px 4px 6px black;
     transition: var(--fast);
+    font-size: 12px;
 }
 
 .LrSlider .sliderWindow .sliderItemsContainer .sliderItem .photo{

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/w3.css">
+    <link rel="stylesheet" href="./css/LrStyles.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/user_page.css">
+</head>
+<body>
+    <header id="header">
+        <nav class="flexStart">
+            <button onclick="LrOpenModal('modalMobileSidebar')"><img src="./images/icons/list.svg" alt=""></button>
+        </nav>
+    </header>
+
+    <div class="modal" id="modalMobileSidebar" onclick="LrCloseModal('modalMobileSidebar')">
+        <div class="modalItem sidebar flexColumnStartCenter">
+                <button onclick="changeView('home')">Home</button>
+                <button onclick="changeView('preferences')">Preferencias</button>
+                <button onclick="changeView('Catalogue')">Catálogo De Animais</button>
+                <button onclick="logoutUser()">Sair</button>
+        </div>
+    </div>
+
+    <div id="modalCadastroAnimal" class="modal flexCenter" onclick="LrCloseModal('modalCadastroAnimal')">
+        <div class="modalItem flexColumnStart" onclick="event.stopPropagation()">
+            <img class="closeModalButton" src="./images/icons/x-lg.svg" alt="X-close" onclick="LrCloseModal('modalCadastroAnimal')">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nnome" autocomplete="off">
+
+            <label for="tipoAnimal">Escolha qual o animal:</label>
+            <select name="tipoAnimal" id="tipoAnimal">
+                <option value="Cachorro">Cachorro</option>
+                <option value="Gato">Gato</option>
+                <option value="Pássaro">Pássaro</option>                
+            </select>
+
+            <label for="raca">Raça:</label>
+            <input type="text" id="raca" name="nraca" autocomplete="off">
+
+            <label for="idade">Idade (Anos):</label>
+            <input type="text" id="idade" name="nidade" autocomplete="off">
+
+            <label for="tamanho">Tamanho:</label>
+            <select name="tamanho" id="tamanho">
+                <option value="Pequeno">Pequeno</option>
+                <option value="Médio">Médio</option>
+                <option value="Grande">Grande</option>
+            </select>
+
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao"></textarea>
+
+            <button onclick="adicionaDados()" id="enviaDados" type="submit">Confirmar</button>
+        </div>        
+    </div>
+    <main>
+        <div class="flexColumnStartCenter sidebar">
+            <button onclick="changeView('home')">Home</button>
+            <button onclick="changeView('preferences')">Preferencias</button>
+            <button onclick="changeView('Catalogue')">Catálogo De Animais</button>
+            <button onclick="logoutUser()">Sair</button>
+        </div>
+        <section class="home flexColumnStartStart">
+            <img class="profileImage" src="./images/icons/person.svg" alt="Imagem De Perfil">
+            <h1>Bem Vindo, <span id="userOutput"></span>!</h1>
+            <h2>Contato: <span id="emailOutput"></span></h2>
+        </section>
+        <section class="preferences flexColumnStartStart hide">
+            <h1>Preferências</h1>
+            <h2>Trocar Senha <button class="editButton" onclick="editData()"><img src="./images/icons/pencil.svg" alt="Lapis"></button></h2>
+            <br>
+            <h2>Trocar Email <button class="editButton" onclick="editData()"><img src="./images/icons/pencil.svg" alt="Lapis"></button></h2>
+        </section>
+
+        <section class="Catalogue flexColumnStartStart hide">
+            <h1>Catálogo De Animais</h1>
+            <h2>Animais Cadastrados</h2>
+            <br>
+            <button onclick="LrOpenModal('modalCadastroAnimal')">Novo Animal</button>
+            <table id="animalTable">
+                <tr>
+                    <th>Nome</th>
+                    <th>Raça</th>
+                    <th>Tipo</th>
+                    <th>Idade</th>
+                    <th>Tamanho</th>
+                    <th>Descrição</th>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <script src="./js/user_page.js"></script>
+    <script src="./js/LrStyles.js"></script>
+    <script src="./js/Vinicius_CadastroAnimais.js"></script>
+</body>
+</html>

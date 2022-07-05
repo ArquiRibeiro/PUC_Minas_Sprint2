@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="icon" href="./images/icons/dog-solid.ico">
+    
+    <link rel="stylesheet" href="./css/w3.css">
+    <link rel="stylesheet" href="./css/LrStyles.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/sobre.css">
+</head>
+<body>
+    <div id="modalLogin" class="modal flexCenter" onclick="LrCloseModal('modalLogin')">
+        <div class="modalItem" onclick="event.stopPropagation()">
+            <form class="flexColumnCenter">
+                <label for="userInput2">Usuário</label>
+                <input type="text" name="" id="userInput2">
+
+                <label for="passwordInput2">Senha</label>
+                <input type="text" name="" id="passwordInput2">
+                <button type="button" onclick="loginUser('userInput2', 'passwordInput2')">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modalMobileSidebar" class="modal" onclick="LrCloseModal('modalMobileSidebar')">
+        <nav class="flexColumnStartCenter navLinks">
+            <a class="flexColumnCenter navLink" href="./index.html">
+                <span>Home</span>
+            </a>
+            <a class="flexColumnCenter navLink" href="./sobre.html">
+                <span>Sobre Nós</span>
+            </a>
+            <a class="flexColumnCenter navLink" href="./adotar.html">
+                <span>Quero Adotar</span>
+            </a>
+            <a class="flexColumnCenter navLink" href="./doar.html">
+                <span>Quero Doar</span>
+            </a>
+            <a class="flexColumnCenter navLink" href="https://encarameladospuc.blogspot.com/" target="_blank" rel="noopener noreferrer">
+                <span>Blog</span>
+            </a>
+
+            <a id="signUpButton" class="signUp neonHover navLink" href="./registrar.html">Registrar ONG</a>
+            <a id="signInButton" class="signIn neonHover navLink" onclick="LrOpenModal('modalLogin')">Entrar</a>
+        </nav>
+    </div>
+
+    <header id="header">
+        <section id="navBar">
+            <div class="flexStart iconTitle">
+                <img class="logo" src="./images/icons/dog-solid.svg" alt="logo">
+                <h2>Encaramelados</h2>
+            </div>
+            <div class="flexRight buttons">
+                <a class="signUp neonHover" href="./registrar.html">Registrar ONG</a>
+                <a class="signIn neonHover" onclick="LrOpenModal('modalLogin')">Entrar</a>
+            </div>
+
+            <nav class="flexRight navLinks">
+                <button class="w3-button mobileSidebarButton" onclick="LrOpenModal('modalMobileSidebar')">&#9776;</button>
+
+                <a class="flexColumnCenter navLink" href="./index.html">
+                    <img class="icon" src="./images/icons/paw-solid.svg" alt="icon">
+                    <span>Home</span>
+                </a>
+                <a class="flexColumnCenter navLink" href="./sobre.html">
+                    <img class="icon" src="./images/icons/circle-info-solid.svg" alt="icon">
+                    <span>Sobre Nós</span>
+                </a>
+                <a class="flexColumnCenter navLink" href="./adotar.html">
+                    <img class="icon" src="./images/icons/house-solid.svg" alt="icon">
+                    <span>Quero Adotar</span>
+                </a>
+                <a class="flexColumnCenter navLink" href="./doar.html">
+                    <img class="icon" src="./images/icons/house-medical-solid.svg" alt="icon">
+                    <span>Quero Doar</span>
+                </a>
+                <a class="flexColumnCenter navLink" href="https://encarameladospuc.blogspot.com/" target="_blank" rel="noopener noreferrer">
+                    <img class="icon" src="./images/icons/newspaper-solid.svg" alt="icon">
+                    <span>Blog</span>
+                </a>
+            </nav>
+        </section>
+    </header>
+
+    <main id="main">
+        <h1>Quem Somos?</h1>
+        <section>
+            <h2>A equipe</h2>
+            <p>Somos estudantes da Pontifícia Universidade Católica de Minas Gerais (PUC-MG) preocupados com a situação precária que muitos animais se encontram nas ruas</p>
+        </section>
+
+        <section>
+            <h2>O propósito</h2>
+            <p>Este website foi criado com o propósito de facilitar a adoção e doação de animais</p>
+        </section>
+    </main>
+
+    <footer id="footer" class="flexCenter">
+        <p>PUC Minas - São Gabriel (2022)</p>
+    </footer>
+
+    <script src="./js/LrStyles.js"></script>
+    <script src="./js/Login.js"></script>
+</body>
+</html>

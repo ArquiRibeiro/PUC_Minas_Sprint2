@@ -60,3 +60,18 @@ function LrGoogleMapGoTo(LrGoogleMapId, url){
     let LrGoogleMap = document.getElementById("LrGoogleMap" + LrGoogleMapId);
     LrGoogleMap.src = url;
 }
+
+function LrCloseModal(id){
+    document.getElementById(id).style.opacity = "0%";
+    document.getElementById(id).style.display = "none";    
+}
+
+function LrOpenModal(id){
+    document.getElementById(id).style.opacity = "100%";
+    document.getElementById(id).style.display = "flex";    
+}
+
+function LrOpenMobileSidebar(){
+    let mobileSideBar = document.getElementById("LrMobileSidebar");
+    mobileSideBar.style.display = "flex";
+}

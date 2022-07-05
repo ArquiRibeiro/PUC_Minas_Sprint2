@@ -16,6 +16,19 @@
     <link rel="stylesheet" href="./css/registrar.css">  
 </head>
 <body>
+    <div id="modalLogin" class="modal flexCenter" onclick="LrCloseModal('modalLogin')">
+        <div class="modalItem" onclick="event.stopPropagation()">
+            <form class="flexColumnCenter">
+                <label for="userInput2">Usuário</label>
+                <input type="text" name="" id="userInput2">
+
+                <label for="passwordInput2">Senha</label>
+                <input type="text" name="" id="passwordInput2">
+                <button type="button" onclick="loginUser('userInput2', 'passwordInput2')">Login</button>
+            </form>
+        </div>
+    </div>
+
     <section class="flexCenter">
         <a id="returnButton" href="./index.html">Retornar</a>
         <img id="heroImage1" src="./images/cat-g47742c9bf_1280.jpg" alt="Gato esticando">
@@ -23,13 +36,13 @@
         <img id="heroImage2" src="./images/puppy-g42d73218a_1280.jpg" alt="Cachorro em caixa">
         <!--Imagem de <a href="https://pixabay.com/pt/users/vlaaitje-1637107/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1047521">Ilona Krijgsman</a> por <a href="https://pixabay.com/pt/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1047521">Pixabay</a>-->        
         <form id="signUpForm" class="flexColumnCenter" action="">
-            <label for="nameInput">Nome Da ONG</label>
-            <input type="text" name="nameInput" id="nameInput">
+            <label for="userInput">Nome Da ONG</label>
+            <input type="text" name="userInput" id="userInput">
 
             <label for="emailInput">E-Mail</label>
             <input type="text" name="emailInput" id="emailInput">
 
-            <label for="passwordInput">Senha (min 8 caracteres)</label>        
+            <label for="passwordInput">Senha (min 8 caracteres)</label>
             <input type="text" name="passwordInput" id="passwordInput" minlength="8">
 
             <label for="addressInput">Endereço</label>
@@ -45,12 +58,14 @@
                 </optgroup>
             </select>
             <div class="flexcenter">
-                <button id="signUpButton" type="button">Registrar</button>
-                <button id="signInButton" type="button">Ja Estou Registrado</button>
+                <button id="signUpButton" type="button" disabled="true">Registrar</button>
+                <button id="signInButton" type="button" onclick="LrOpenModal('modalLogin')">Ja Estou Registrado</button>
             </div>
         </form>
     </section>
 
     <script src="./js/LrStyles.js"></script>
+    <script src="./js/Login.js"></script>
+    <script src="./js/SignUp.js"></script>
 </body>
 </html>

@@ -1,225 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Leonardo Ribeiro Andrade">
-    <meta name="description" content="Doe ou adote animais de estimação no Brasil">
-    <meta name="keywords" content="Adoção, Doação, Cachorro, Cão, Gato, Pet">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Leonardo Ribeiro Andrade">
+        <meta name="description" content="Doe ou adote animais de estimação no Brasil">
+        <meta name="keywords" content="Adoção, Doação, Cachorro, Cão, Gato, Pet">
 
-    <title>Encaramelados</title>
+        <title>Encaramelados</title>
 
-    <link rel="stylesheet" href="./css/w3.css">
-    <link rel="stylesheet" href="./css/LrStyles.css">
-    <link rel="stylesheet" href="./css/index.css">
-</head>
-<body>
-    <header id="header">
-        <section id="hero" class="flexCenter">
-            <img class="heroImage" src="./images/dog-g87c0855e7_1920.jpg" alt="">
-            <!--Imagem de <a href="https://pixabay.com/pt/users/stocksnap-894430/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2606759">StockSnap</a> por <a href="https://pixabay.com/pt/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2606759">Pixabay</a> -->
-            <h1 class="heroTitle">Doe um pet<br>Ou<br>Adote um amigo</h1>            
-        </section>
-
-        <section id="navBar">
-            <div class="flexStart iconTitle">
-                <img class="logo" src="./images/icons/dog-solid.svg" alt="logo">
-                <h2>Encaramelados</h2>
+        <link rel="icon" href="./images/icons/dog-solid.ico">
+        
+        <link rel="stylesheet" href="./css/w3.css">
+        <link rel="stylesheet" href="./css/LrStyles.css">
+        <link rel="stylesheet" href="./css/index.css">
+    </head>
+    
+    <body>
+        <div id="modalLogin" class="modal flexCenter" onclick="LrCloseModal('modalLogin')">
+            <div class="modalItem" onclick="event.stopPropagation()">
+                <form class="flexColumnCenter">
+                    <label for="userInput2">Usuário</label>
+                    <input type="text" name="" id="userInput2">
+    
+                    <label for="passwordInput2">Senha</label>
+                    <input type="text" name="" id="passwordInput2">
+                    <button type="button" onclick="loginUser('userInput2', 'passwordInput2')">Login</button>
+                </form>
             </div>
-            <div class="flexRight buttons">
-                <a class="signUp neonHover" href="./registrar.html">Registrar ONG</a>
-                <a class="signIn neonHover" href="./entrar.html">Entrar</a>
-            </div>
+        </div>
 
-            <nav class="flexRight navLinks">
-                <button class="w3-button sidebarButton" onclick="w3_open()">&#9776;</button>            
-
+        <div id="modalMobileSidebar" class="modal" onclick="LrCloseModal('modalMobileSidebar')">
+            <nav class="flexColumnStartCenter navLinks">
                 <a class="flexColumnCenter navLink" href="./index.html">
-                    <img class="icon" src="./images/icons/paw-solid.svg" alt="icon">
                     <span>Home</span>
                 </a>
-                <a class="flexColumnCenter navLink" href="#">
-                    <img class="icon" src="./images/icons/circle-info-solid.svg" alt="icon">
+                <a class="flexColumnCenter navLink" href="./sobre.html">
                     <span>Sobre Nós</span>
                 </a>
                 <a class="flexColumnCenter navLink" href="./adotar.html">
-                    <img class="icon" src="./images/icons/house-solid.svg" alt="icon">
                     <span>Quero Adotar</span>
                 </a>
                 <a class="flexColumnCenter navLink" href="./doar.html">
-                    <img class="icon" src="./images/icons/house-medical-solid.svg" alt="icon">
                     <span>Quero Doar</span>
                 </a>
-                <a class="flexColumnCenter navLink" href="#">
-                    <img class="icon" src="./images/icons/newspaper-solid.svg" alt="icon">
+                <a class="flexColumnCenter navLink" href="https://encarameladospuc.blogspot.com/" target="_blank" rel="noopener noreferrer">
                     <span>Blog</span>
                 </a>
+
+                <a id="signUpButton" class="signUp neonHover navLink" href="./registrar.html">Registrar ONG</a>
+                <a id="signInButton" class="signIn neonHover navLink" onclick="LrOpenModal('modalLogin')">Entrar</a>
             </nav>
-        </section>
+        </div>
 
-    </header>
-
-    <main id="main">        
-
-        <section id="postedSlider" class="flexColumnCenter">
-            <div class="flexCenter">
-                <h2 class="title">Disponiveis Para Adoção</h2>
+        <div id="modalAnimalDetails" class="modal flexCenter" onclick="LrCloseModal('modalAnimalDetails')">
+            <div class="modalItem flexColumnStartCenter" onclick="event.stopPropagation()">
+                
             </div>
-            <div class="flexCenter LrSlider">
-                <button type="button" class="arrowButton" onclick="moveSlider('#main #postedSlider .sliderWindow .sliderItemsContainer', 'left', 10)"><img class="arrowIcon" src="./images/icons/angle-left-solid.svg" alt="<"></button>
-                <div class="sliderWindow">
-                    <div class="flexStart sliderItemsContainer" style="left: 0px;">
-                        <div class="sliderItem flexColumnCenter scaleHover">
-                            <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
-                            <span class="local">ONG: X</span>
-                            <span class="local">Local: Y</span>
-                        </div>
-                        <div class="sliderItem flexColumnCenter scaleHover">
-                            <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
-                            <span class="local">ONG: X</span>
-                            <span class="local">Local: Y</span>
-                        </div>
-                        <div class="sliderItem flexColumnCenter scaleHover">
-                            <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
-                            <span class="local">ONG: X</span>
-                            <span class="local">Local: Y</span>
-                        </div>
-                        <div class="sliderItem flexColumnCenter scaleHover">
-                            <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
-                            <span class="local">ONG: X</span>
-                            <span class="local">Local: Y</span>
-                        </div>
-                        <div class="sliderItem flexColumnCenter scaleHover">
-                            <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
-                            <span class="local">ONG: X</span>
-                            <span class="local">Local: Y</span>
-                        </div>
-                        <div class="sliderItem flexColumnCenter scaleHover">
-                            <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
-                            <span class="local">ONG: X</span>
-                            <span class="local">Local: Y</span>
-                        </div>
-                        <div class="sliderItem flexColumnCenter scaleHover">
-                            <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
-                            <span class="local">ONG: X</span>
-                            <span class="local">Local: Y</span>
-                        </div>
-                        <div class="sliderItem flexColumnCenter scaleHover">
-                            <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
-                            <span class="local">ONG: X</span>
-                            <span class="local">Local: Y</span>
-                        </div>
-                        <div class="sliderItem flexColumnCenter scaleHover">
-                            <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
-                            <span class="local">ONG: X</span>
-                            <span class="local">Local: Y</span>
-                        </div>
-                        <div class="sliderItem flexColumnCenter scaleHover">
-                            <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
-                            <span class="local">ONG: X</span>
-                            <span class="local">Local: Y</span>
+        </div>
+
+        <header id="header">            
+            <section id="hero" class="flexCenter">
+                <img class="heroImage" src="./images/dog-g87c0855e7_1920.jpg" alt="">
+                <!--Imagem de <a href="https://pixabay.com/pt/users/stocksnap-894430/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2606759">StockSnap</a> por <a href="https://pixabay.com/pt/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2606759">Pixabay</a> -->
+                <h1 class="heroTitle">Doe um pet<br>Ou<br>Adote um amigo</h1>
+            </section>
+
+            <section id="navBar">
+                <div class="flexStart iconTitle">
+                    <img class="logo" src="./images/icons/dog-solid.svg" alt="logo">
+                    <h2>Encaramelados</h2>
+                </div>
+                <div class="flexRight buttons">
+                    <a id="signUpButton" class="signUp neonHover" href="./registrar.html">Registrar ONG</a>
+                    <a id="signInButton" class="signIn neonHover" onclick="LrOpenModal('modalLogin')">Entrar</a>
+                </div>
+
+                <nav class="flexRight navLinks">
+                    <button class="w3-button mobileSidebarButton" onclick="LrOpenModal('modalMobileSidebar')">&#9776;</button>
+
+                    <a class="flexColumnCenter navLink" href="./index.html">
+                        <img class="icon" src="./images/icons/paw-solid.svg" alt="icon">
+                        <span>Home</span>
+                    </a>
+                    <a class="flexColumnCenter navLink" href="./sobre.html">
+                        <img class="icon" src="./images/icons/circle-info-solid.svg" alt="icon">
+                        <span>Sobre Nós</span>
+                    </a>
+                    <a class="flexColumnCenter navLink" href="./adotar.html">
+                        <img class="icon" src="./images/icons/house-solid.svg" alt="icon">
+                        <span>Quero Adotar</span>
+                    </a>
+                    <a class="flexColumnCenter navLink" href="./doar.html">
+                        <img class="icon" src="./images/icons/house-medical-solid.svg" alt="icon">
+                        <span>Quero Doar</span>
+                    </a>
+                    <a class="flexColumnCenter navLink" href="https://encarameladospuc.blogspot.com/" target="_blank" rel="noopener noreferrer">
+                        <img class="icon" src="./images/icons/newspaper-solid.svg" alt="icon">
+                        <span>Blog</span>
+                    </a>
+                </nav>
+            </section>
+
+        </header>
+
+        <main id="main">        
+
+            <section id="postedSlider" class="flexColumnCenter">
+                <div class="flexCenter">
+                    <h2 class="title">Disponiveis Para Adoção</h2>
+                </div>
+                <div class="flexCenter LrSlider">
+                    <button type="button" class="arrowButton" onclick="moveSlider('#main #postedSlider .sliderWindow .sliderItemsContainer', 'left', 10)"><img class="arrowIcon" src="./images/icons/angle-left-solid.svg" alt="<"></button>
+                    <div class="sliderWindow">
+                        <div class="flexStart sliderItemsContainer" style="left: 0px;">
+                            
                         </div>
                     </div>
-                </div>
-                <button type="button" class="arrowButton" onclick="moveSlider('#main #postedSlider .sliderWindow .sliderItemsContainer', 'right', 10)"><img class="arrowIcon" src="./images/icons/angle-right-solid.svg" alt="<"></button>
-            </div>            
-        </section>
+                    <button type="button" class="arrowButton" onclick="moveSlider('#main #postedSlider .sliderWindow .sliderItemsContainer', 'right', 10)"><img class="arrowIcon" src="./images/icons/angle-right-solid.svg" alt="<"></button>
+                </div>            
+            </section>
 
-        <section id="adoptedSlider" class="flexColumnCenter">
-            <div class="flexCenter">
-                <h2 class="title">Recém-Adotados</h2>
-            </div>
-            <div class="flexCenter LrSlider">
-                <button type="button" class="arrowButton" onclick="moveSlider('#main #adoptedSlider .sliderWindow .sliderItemsContainer', 'left', 10)"><img class="arrowIcon" src="./images/icons/angle-left-solid.svg" alt="<"></button>
-                <div class="sliderWindow">
-                    <div class="flexStart sliderItemsContainer" style="left: 0px;">
-                        <div class="sliderItem flexColumnCenter scaleHover">
-                            <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
-                            <span class="local">ONG: X</span>
-                            <span class="local">Local: Y</span>
-                        </div>
-                        <div class="sliderItem flexColumnCenter scaleHover">
-                            <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
-                            <span class="local">ONG: X</span>
-                            <span class="local">Local: Y</span>
-                        </div>
-                        <div class="sliderItem flexColumnCenter scaleHover">
-                            <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
-                            <span class="local">ONG: X</span>
-                            <span class="local">Local: Y</span>
-                        </div>
-                        <div class="sliderItem flexColumnCenter scaleHover">
-                            <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
-                            <span class="local">ONG: X</span>
-                            <span class="local">Local: Y</span>
-                        </div>
-                        <div class="sliderItem flexColumnCenter scaleHover">
-                            <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
-                            <span class="local">ONG: X</span>
-                            <span class="local">Local: Y</span>
-                        </div>
-                        <div class="sliderItem flexColumnCenter scaleHover">
-                            <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
-                            <span class="local">ONG: X</span>
-                            <span class="local">Local: Y</span>
-                        </div>
-                        <div class="sliderItem flexColumnCenter scaleHover">
-                            <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
-                            <span class="local">ONG: X</span>
-                            <span class="local">Local: Y</span>
-                        </div>
-                        <div class="sliderItem flexColumnCenter scaleHover">
-                            <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
-                            <span class="local">ONG: X</span>
-                            <span class="local">Local: Y</span>
-                        </div>
-                        <div class="sliderItem flexColumnCenter scaleHover">
-                            <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
-                            <span class="local">ONG: X</span>
-                            <span class="local">Local: Y</span>
-                        </div>
-                        <div class="sliderItem flexColumnCenter scaleHover">
-                            <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
-                            <span class="local">ONG: X</span>
-                            <span class="local">Local: Y</span>
+            <section id="adoptedSlider" class="flexColumnCenter">
+                <div class="flexCenter">
+                    <h2 class="title">Recém-Adotados</h2>
+                </div>
+                <div class="flexCenter LrSlider">
+                    <button type="button" class="arrowButton" onclick="moveSlider('#main #adoptedSlider .sliderWindow .sliderItemsContainer', 'left', 10)"><img class="arrowIcon" src="./images/icons/angle-left-solid.svg" alt="<"></button>
+                    <div class="sliderWindow">
+                        <div class="flexStart sliderItemsContainer" style="left: 0px;">
+                            <div class="sliderItem flexColumnStart scaleHover">
+                                <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
+                                <span class="local">Nome: Caramelinho</span>
+                                <span class="local">ONG: Encaramelados</span>
+                                <span class="local">Local: BELO HORIZONTE</span>
+                            </div>
+                            <div class="sliderItem flexColumnStart scaleHover">
+                                <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
+                                <span class="local">Nome: Caramelinho</span>
+                                <span class="local">ONG: Encaramelados</span>
+                                <span class="local">Local: BELO HORIZONTE</span>
+                            </div>
+                            <div class="sliderItem flexColumnStart scaleHover">
+                                <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
+                                <span class="local">Nome: Caramelinho</span>
+                                <span class="local">ONG: Encaramelados</span>
+                                <span class="local">Local: BELO HORIZONTE</span>
+                            </div>
+                            <div class="sliderItem flexColumnStart scaleHover">
+                                <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
+                                <span class="local">Nome: Caramelinho</span>
+                                <span class="local">ONG: Encaramelados</span>
+                                <span class="local">Local: BELO HORIZONTE</span>
+                            </div>
+                            <div class="sliderItem flexColumnStart scaleHover">
+                                <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
+                                <span class="local">Nome: Caramelinho</span>
+                                <span class="local">ONG: Encaramelados</span>
+                                <span class="local">Local: BELO HORIZONTE</span>
+                            </div>
+                            <div class="sliderItem flexColumnStart scaleHover">
+                                <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
+                                <span class="local">Nome: Caramelinho</span>
+                                <span class="local">ONG: Encaramelados</span>
+                                <span class="local">Local: BELO HORIZONTE</span>
+                            </div>
+                            <div class="sliderItem flexColumnStart scaleHover">
+                                <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
+                                <span class="local">Nome: Caramelinho</span>
+                                <span class="local">ONG: Encaramelados</span>
+                                <span class="local">Local: BELO HORIZONTE</span>
+                            </div>
+                            <div class="sliderItem flexColumnStart scaleHover">
+                                <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
+                                <span class="local">Nome: Caramelinho</span>
+                                <span class="local">ONG: Encaramelados</span>
+                                <span class="local">Local: BELO HORIZONTE</span>
+                            </div>
+                            <div class="sliderItem flexColumnStart scaleHover">
+                                <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
+                                <span class="local">Nome: Caramelinho</span>
+                                <span class="local">ONG: Encaramelados</span>
+                                <span class="local">Local: BELO HORIZONTE</span>
+                            </div>
+                            <div class="sliderItem flexColumnStart scaleHover">
+                                <img class="photo" src="https://source.unsplash.com/random/?dog" alt="Foto">
+                                <span class="local">Nome: Caramelinho</span>
+                                <span class="local">ONG: Encaramelados</span>
+                                <span class="local">Local: BELO HORIZONTE</span>
+                            </div>
                         </div>
                     </div>
+                    <button type="button" class="arrowButton" onclick="moveSlider('#main #adoptedSlider .sliderWindow .sliderItemsContainer', 'right', 10)"><img class="arrowIcon" src="./images/icons/angle-right-solid.svg" alt="<"></button>
+                </div>            
+            </section>
+
+            <section id="FAQ" class="flexColumnCenter">
+                <h2>FAQ</h2>
+                <div id="LrAccordion1" class="LrAccordion">
+                    <button class="LrAccordionButton" onclick="openAccordion(1)">Como adotar um pet</button>
+                    <p class="LrAccordionItem">
+                        -Clique em quero adotar
+                        <br>
+                        -Veja as ONGS disponíveis. (É possível ver as ONGS mais próximas de você);
+                        <br>
+                        -Entre em contato com a ONG escolhida;
+                        <br>
+                        Você consegue ver no site os animais disponíveis nessa ONG.Mas se preferir pode optar por conhecer os animais disponíveis na própria ONG, basta ligar e marcar uma visita.</p>
                 </div>
-                <button type="button" class="arrowButton" onclick="moveSlider('#main #adoptedSlider .sliderWindow .sliderItemsContainer', 'right', 10)"><img class="arrowIcon" src="./images/icons/angle-right-solid.svg" alt="<"></button>
-            </div>            
-        </section>
+                <div id="LrAccordion2" class="LrAccordion">
+                    <button class="LrAccordionButton" onclick="openAccordion(2)">Como doar um pet</button>
+                    <p class="LrAccordionItem">
+                        -Clique em quero doar;
+                        <br>
+                         -Veja as ONGS disponíveis. (É possível ver as ONGS mais próximas de você);
+                         <br>
+                        - Entre em contato com a ONG escolhida e veja se ela tem disponibilidade para receber o pet.</p>
+                </div>
+                <div id="LrAccordion3" class="LrAccordion">
+                    <button class="LrAccordionButton" onclick="openAccordion(3)">Onde posso encontrar ONG's</button>
+                    <p class="LrAccordionItem">
+                        1° FORMA
+                        <br>
+                        -Entre na pagina quero adotar ou quero doar
+                        <br>
+                        -Procure pelas regiões de Minas Gerais. Dessa forma, você consegue achar as ONGS mais próximas de você.
+                        <br>
+                        <br>
+                        2° FORMA
+                        <br>
+                        -Vá para a página inicial do site, onde se encontram os animais disponíveis;
+                        <br>
+                        -Abaixo de cada foto tem-se o nome da ONG e seu endereço.
+                        <br>
+                        <br>
+                        3° FORMA
+                        <br>
+                        -Acesse nosso Blog. Nele você consegue conversar com outros usuários do site e trocar informações sobre suas experiências.</p>
+                </div>
+                <div id="LrAccordion4" class="LrAccordion">
+                    <button class="LrAccordionButton" onclick="openAccordion(4)">Preciso pagar algo?</button>
+                    <p class="LrAccordionItem">Não, todo o trabalho é voluntario sem necessidade nenhuma de pagar a adoção.</p>
+                </div>
+            </section>
 
-        <section id="FAQ" class="flexColumnCenter">
-            <h2>FAQ</h2>
-            <div id="LrAccordion1" class="LrAccordion">
-                <button class="LrAccordionButton" onclick="openAccordion(1)">Como adotar um pet</button>
-                <p class="LrAccordionItem">TESTE</p>
-            </div>
-            <div id="LrAccordion2" class="LrAccordion">
-                <button class="LrAccordionButton" onclick="openAccordion(2)">Como doar um pet</button>
-                <p class="LrAccordionItem">TESTE</p>
-            </div>
-            <div id="LrAccordion3" class="LrAccordion">
-                <button class="LrAccordionButton" onclick="openAccordion(3)">Onde posso encontrar ONG's</button>
-                <p class="LrAccordionItem">TESTE</p>
-            </div>
-            <div id="LrAccordion4" class="LrAccordion">
-                <button class="LrAccordionButton" onclick="openAccordion(4)">Preciso pagar algo?</button>
-                <p class="LrAccordionItem">TESTE</p>
-            </div>
-        </section>
+            <section id="blog">
 
-        <section id="blog">
+            </section>
 
-        </section>
+        </main>
 
-    </main>
+        <footer id="footer" class="flexCenter">
+            <p>PUC Minas - São Gabriel (2022)</p>
+        </footer>
 
-    <footer id="footer" class="flexCenter">
-        <p>(WIP) Autor: Leonardo Ribeiro Andrade</p>
-    </footer>
-
-    <script src="./js/LrStyles.js"></script>
-</body>
+        <script src="./js/LrStyles.js"></script>
+        <script src="./js/Login.js"></script>
+        <script src="./js/index.js"></script>
+    </body>
 </html>
